@@ -2,7 +2,7 @@
 
 A comprehensive smart doorbell system that provides real-time motion detection, visitor photography, and remote notifications when you're not at home.
 
-## 🚀 Features
+## Features
 
 - **Motion Detection**: Real-time motion sensing using PIR sensors
 - **Visitor Photography**: Automatic photo capture when doorbell is pressed
@@ -11,7 +11,7 @@ A comprehensive smart doorbell system that provides real-time motion detection, 
 - **IoT Integration**: Real-time monitoring and remote control capabilities
 - **Live Monitoring**: Real-time status updates and alerts
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Hardware**: Arduino Uno, PIR Motion Sensors, Camera Module, WiFi Module
 - **Backend**: Python (Flask/FastAPI)
@@ -20,7 +20,7 @@ A comprehensive smart doorbell system that provides real-time motion detection, 
 - **Database**: SQLite/MySQL for storing visitor logs
 - **Authentication**: JWT-based secure authentication
 
-## 📋 Hardware Requirements
+## Hardware Requirements
 
 - Arduino Uno R3
 - PIR Motion Sensor (HC-SR501)
@@ -32,14 +32,14 @@ A comprehensive smart doorbell system that provides real-time motion detection, 
 - Push Button (doorbell)
 - Power Supply (5V/3.3V)
 
-## 🔧 Software Requirements
+##  Software Requirements
 
 - Python 3.8+
 - Arduino IDE
 - Required Python libraries (see requirements.txt)
 - Mobile development environment (optional)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 smart-doorbell-system/
@@ -79,7 +79,7 @@ smart-doorbell-system/
 └── README.md                       # This file
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -118,15 +118,14 @@ cd mobile_app
 flutter pub get
 flutter run
 ```
-
-## 🔐 Authentication
+## Authentication
 
 The system uses JWT-based authentication with the following endpoints:
 - `POST /api/auth/login` - User login
 - `POST /api/auth/register` - User registration
 - `GET /api/auth/verify` - Token verification
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### Motion Detection
 - `GET /api/motion/status` - Current motion status
@@ -141,7 +140,7 @@ The system uses JWT-based authentication with the following endpoints:
 - `POST /api/notifications/send` - Send notification
 - `GET /api/notifications/settings` - Get notification preferences
 
-## 🏠 Home/Away Mode
+## Home/Away Mode
 
 The system automatically detects if you're home using:
 - Mobile app GPS location
@@ -153,79 +152,22 @@ When away:
 - Instant push notifications
 - Motion detection sensitivity increased
 
-## 📸 Photo Capture System
+## Photo Capture System
 
 - Automatic capture when doorbell is pressed
 - Motion-triggered photography
 - Photos stored locally and in cloud storage
 - Timestamp and visitor log maintenance
 
-## 🔧 Configuration Options
 
-Edit `config/config.yaml`:
-```yaml
-system:
-  home_detection_method: "wifi"  # wifi, gps, manual
-  photo_quality: "high"          # low, medium, high
-  notification_delay: 2          # seconds
-  motion_sensitivity: 7          # 1-10 scale
-
-camera:
-  resolution: "1920x1080"
-  format: "jpg"
-  storage_path: "./photos/"
-
-notifications:
-  push_service: "firebase"       # firebase, pusher
-  email_alerts: true
-  sms_alerts: false
-```
-
-## 🐳 Docker Deployment
-
-```bash
-docker-compose up -d
-```
-
-## 🧪 Testing
-
-Run unit tests:
-```bash
-python -m pytest tests/
-```
-
-Test hardware connections:
-```bash
-python tests/test_hardware.py
-```
-
-## 📈 Monitoring and Logs
-
-- System logs: `logs/system.log`
-- Motion detection logs: `logs/motion.log`
-- Photo capture logs: `logs/camera.log`
-- Web dashboard: `http://localhost:5000/dashboard`
-
-## 🔒 Security Features
+##  Security Features
 
 - Encrypted communication between components
 - Secure photo storage with access controls
 - Authentication required for all API access
 - Regular security updates and patches
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues:
 1. **Arduino not connecting**: Check USB cable and driver installation
@@ -233,19 +175,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. **No notifications**: Check internet connection and notification settings
 4. **Motion detection issues**: Adjust PIR sensor sensitivity
 
-### Getting Help:
-- Check the [Issues](https://github.com/yourusername/smart-doorbell-system/issues) page
-- Review documentation in the `docs/` folder
-- Contact: [your-email@example.com]
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Arduino community for hardware inspiration
 - OpenCV for computer vision capabilities
 - Flask/FastAPI communities for backend framework
 - Contributors and testers
 
-## 📊 System Performance
+## System Performance
 
 - Motion detection accuracy: 95%+
 - Photo capture time: <2 seconds
@@ -253,5 +191,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Battery life: 6-12 months (with optimization)
 
 ---
-
-**⭐ Star this repository if you found it helpful!**
